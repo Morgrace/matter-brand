@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as *;
+
+.brands {
+    padding: 5rem 0 8rem;
+    grid-column: center-start / center-end;
+    background-color: $color-white-shade-2;
+
+
+    &__head {
+        margin: 0 auto;
+        width: 74rem;
+        hyphens: auto;
+        text-align: center;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        justify-items: center;
+    }
+
+    &__icon {
+        width: 12rem;
+    }
+}

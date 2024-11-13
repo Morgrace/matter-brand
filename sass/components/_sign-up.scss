@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as *;
+
+.sign-up {
+    grid-column: full-start / full-end;
+    background-color: $color-black;
+    color: $color-white-shade-4;
+    margin-bottom: 8rem;
+    padding: 5rem 0;
+
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        display: flex;
+        gap: 1.5rem;
+
+
+    }
+
+    &__head {
+        height: 10rem;
+        align-self: flex-start;
+    }
+
+    &__sub-heading {
+        font-size: 1.8rem;
+    }
+
+    &__email {
+        border: none;
+        outline: none;
+        width: 50rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #D8D8D8;
+        background-color: transparent;
+        caret-color: $color-white-shade-4;
+
+        // align-self: end;
+
+        &:focus {
+            color: $color-white-shade-4;
+
+            &:invalid {
+                border-bottom: 1px solid red;
+            }
+        }
+
+        &::placeholder {
+            font-family: $font-body;
+            font-size: 1.4rem;
+            color: #999999;
+        }
+
+    }
+
+}

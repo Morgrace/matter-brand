@@ -1,0 +1,23 @@
+.header {
+    grid-column: full-start/full-end;
+    display: grid;
+    justify-items: center;
+
+
+    &__logo {
+        margin-bottom: 2rem;
+
+        img {
+            width: 45.9rem;
+            height: 9.1rem;
+        }
+    }
+
+    &__motto {
+        text-align: center;
+        font-size: 1.8rem;
+        max-width: 70rem;
+
+
+    }
+}

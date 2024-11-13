@@ -1,0 +1,41 @@
+.footer {
+    grid-column: full-start / full-end;
+
+    &__content {}
+
+    &__logo {}
+
+    &__box {}
+
+    &__location {}
+
+    &__location-container {}
+
+    &__location-img {
+        img {}
+    }
+
+    &__location-details {}
+
+    &__location-name {}
+
+    &__location-address {}
+
+    &__contact {}
+
+    &__contact-email {}
+
+    &__social {}
+
+    &__social-icon {
+        &--facebook {}
+
+        &--instagram {}
+
+        &--twitter {}
+    }
+
+    &__copyright {}
+
+    &__copyright-text {}
+}

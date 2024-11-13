@@ -1,0 +1,148 @@
+@use '../abstracts/variables' as *;
+
+.food {
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(5, [col-start] 1fr [col-end]);
+        grid-template-rows: repeat(7, [row-start] min-content [row-end]);
+        gap: 4rem;
+    }
+
+
+    &__card {
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        // justify-items: end;
+        border-radius: 11px;
+        box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+
+        &--1 {
+            grid-row: row-start 1 / row-end 1;
+            grid-column: col-start 3/ -1;
+        }
+
+        &--2 {
+            grid-row: row-start 2 / row-end 2;
+            grid-column: col-start 1 / col-end 3;
+        }
+
+        &--3 {
+            grid-row: row-start 2 / row-end 2;
+            grid-column: col-start 4 / col-end 5;
+        }
+
+        &--4 {
+            grid-row: row-start 3 / row-end 3;
+            grid-column: col-start 1 / col-end 2;
+        }
+
+        &--5 {
+            grid-row: row-start 3 / row-end 3;
+            grid-column: col-start 3 / col-end 5;
+        }
+
+        &--6 {
+            grid-row: row-start 4 / row-end 4;
+            grid-column: col-start 1 / col-end 3;
+        }
+
+        &--7 {
+            grid-row: row-start 5 / row-end 5;
+            grid-column: col-start 1 / col-end 2;
+        }
+
+        &--8 {
+            grid-row: row-start 5 / row-end 5;
+            grid-column: col-start 3/-1;
+        }
+
+        &--9 {
+            grid-row: row-start 6 / row-end 6;
+            grid-column: col-start 1/ col-end 3;
+        }
+
+        &--10 {
+            grid-row: row-start 6 / row-end 6;
+            grid-column: col-start 4 / col-end 5;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5rem;
+            background-color: $color-white-shade-4;
+        }
+
+        &--11 {}
+
+        &--12 {}
+
+        &--combine {
+            grid-row: row-start 7 / -1;
+            grid-column: 1/-1;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+    }
+
+    &__reviewer {
+        font-style: italic;
+        font-size: 1.4rem;
+
+
+        &--name {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        &--position {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__img {
+        // max-width: 100%;
+        // max-height: 100%;
+        // object-fit: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__literature {
+        padding: 3rem 5rem 5rem;
+        text-align: center;
+        font-style: italic;
+        background-color: $color-white-shade-4;
+
+        &>* {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__log {
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: $color-white-shade-3;
+        text-transform: uppercase;
+    }
+
+    &__name {
+        font-family: $font-heading;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+
+.country {
+    grid-column: full-start / full-end;
+    height: 45vh;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+
+    &__image {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: end;
+        height: 45vh;
+
+        &>* {
+            color: $color-white-shade-4;
+        }
+
+        &--1 {
+            background-image: linear-gradient(to bottom, transparent 75%, rgba($color-black, .8)), url('../img/location-los-angeles-img.webp');
+            background-size: cover;
+            background-position: top;
+        }
+
+        &--2 {
+            background-image: linear-gradient(to bottom, transparent 75%, rgba($color-black, .8)), url('../img/location-monterey-img.webp');
+            background-size: cover;
+            background-position: top;
+        }
+
+    }
+
+
+
+    &__head {
+        margin: 0 0 4rem 2rem;
+        min-height: 5rem;
+
+    }
+
+    &__location {
+        margin: 0 2rem 4rem 0;
+        font-size: 1.4rem;
+        text-align: right;
+        height: 5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    &__name {
+        font-weight: 700;
+
+    }
+
+    &__street {
+        font-weight: 400;
+    }
+}

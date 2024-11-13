@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+.heading {
+
+    &__tertiary {
+        font-family: $font-heading; //playfair display
+        font-size: 3.6rem; //36px
+        font-weight: 700; //bold
+        color: $color-black;
+
+        &--white {
+            color: $color-white-shade-4 !important;
+        }
+    }
+
+    &__features {
+        font-family: $font-heading;
+        font-size: 2.4rem; //24px
+        font-weight: 700; //bold
+
+    }
+}
+
+.font-heading {
+    font-family: $font-heading;
+    font-weight: 700;
+    font-style: italic;
+    color: $color-black;
+}

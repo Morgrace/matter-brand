@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+
+.hero {
+    grid-column: full-start / full-end;
+    background-image: url('../../img/bg-hero.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 10rem;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+
+    &__text-container {
+        width: 59%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    &__heading {
+        color: $color-white-shade-3;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}

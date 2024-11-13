@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 1.6rem 1.961rem 1.6rem 2.1rem;
+
+    &--white {
+        color: $color-black;
+        background-color: $color-white-shade-4;
+        border: 1px solid $color-black;
+
+
+    }
+
+    &--dark {
+        color: $color-white-shade-4;
+        background-color: $color-black;
+        border: 1px solid $color-white-shade-4;
+    }
+}

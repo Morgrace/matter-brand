@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+
+.content {
+    grid-column: center-start / center-end;
+    display: grid;
+
+
+    &__heading {
+        font-size: 3.6rem;
+        justify-self: center;
+    }
+}

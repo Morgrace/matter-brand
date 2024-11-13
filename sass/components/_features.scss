@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+
+.features {
+    grid-column: full-start / full-end;
+    padding: 5rem 0;
+    background-color: $color-black;
+
+    display: grid;
+    justify-content: center;
+
+    &>* {
+        color: $color-white-shade-4;
+    }
+
+    &__head {
+        text-align: center;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        row-gap: 2rem;
+    }
+
+    &__box {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    &__icon {
+        width: 10rem;
+        height: 10rem;
+    }
+}
