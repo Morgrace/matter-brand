@@ -19,6 +19,12 @@
         font-weight: 700; //bold
 
     }
+
+    &__footer {
+        font-family: $font-heading;
+        font-weight: 700;
+        font-size: 2rem;
+    }
 }
 
 .font-heading {

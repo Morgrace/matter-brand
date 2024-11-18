@@ -1,41 +1,103 @@
+@use '../abstracts/variables' as *;
+
 .footer {
     grid-column: full-start / full-end;
+    background-color: $color-white-shade-2;
 
-    &__content {}
+    display: flex;
+    flex-direction: column;
 
-    &__logo {}
+    &__content {
+        align-self: center;
+        display: flex;
+        gap: 15vw;
 
-    &__box {}
+        padding: 0 5rem;
+        margin-bottom: 8rem;
+
+
+
+    }
+
+    &__logo {
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__box {
+        display: flex;
+        gap: 5rem;
+    }
 
     &__location {}
 
-    &__location-container {}
+    &__location-container {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
 
     &__location-img {
-        img {}
+        img {
+            width: 8rem;
+            height: 8rem;
+        }
     }
 
     &__location-details {}
 
-    &__location-name {}
+    &__location-name {
+        font-weight: 700; //bold
+        font-size: 2rem;
+        color: $color-black;
+        margin-bottom: 1rem;
 
-    &__location-address {}
-
-    &__contact {}
-
-    &__contact-email {}
-
-    &__social {}
-
-    &__social-icon {
-        &--facebook {}
-
-        &--instagram {}
-
-        &--twitter {}
+        span {
+            display: block;
+            font-weight: 100;
+            font-size: 2rem;
+        }
     }
 
-    &__copyright {}
+    &__location-address {
+        font-size: 1.4rem;
+    }
 
-    &__copyright-text {}
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__contact-email {
+        font-size: 1.4rem;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__social-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__copyright {
+        padding: 1rem;
+        text-align: center;
+        background-color: $color-black;
+    }
+
+    &__copyright-text {
+        font-size: 1.2rem;
+        color: $color-white-shade-4;
+    }
 }
