@@ -12,9 +12,9 @@
 html {
     font-size: 62.5%; // 1 rem = 10px
 
-    // @include respond($bp-largest) {
-    //     font-size: 40%;
-    // }
+    @include respond($bp-small) {
+        font-size: 50%; // 1 rem = 8px
+    }
 }
 
 body {

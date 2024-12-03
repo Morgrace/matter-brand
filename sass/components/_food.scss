@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .food {
     &__box {
@@ -6,6 +7,10 @@
         grid-template-columns: repeat(5, [col-start] 1fr [col-end]);
         grid-template-rows: repeat(7, [row-start] min-content [row-end]);
         gap: 4rem;
+
+        @include respond($bp-large) {
+            grid-template-rows: repeat(10, [row-start] min-content [row-end]);
+        }
     }
 
 
@@ -21,46 +26,108 @@
         &--1 {
             grid-row: row-start 1 / row-end 1;
             grid-column: col-start 3/ -1;
+
+            @include respond($bp-large) {
+                grid-column: col-start 2/ -2;
+            }
         }
 
         &--2 {
             grid-row: row-start 2 / row-end 2;
             grid-column: col-start 1 / col-end 3;
+
+            @include respond($bp-large) {
+                grid-column: col-start 2/ -2;
+            }
         }
 
         &--3 {
             grid-row: row-start 2 / row-end 2;
             grid-column: col-start 4 / col-end 5;
+
+            @include respond($bp-large) {
+                grid-row: row-start 3 / row-end 3;
+                grid-column: col-start 2/ -2;
+
+            }
+
+            img {
+                @include respond($bp-img-special) {
+                    object-fit: fill !important;
+                }
+
+                @include respond($bp-large) {
+                    object-fit: cover !important;
+                }
+            }
         }
 
         &--4 {
             grid-row: row-start 3 / row-end 3;
             grid-column: col-start 1 / col-end 2;
+
+            @include respond($bp-large) {
+                grid-row: row-start 4 / row-end 4;
+            }
         }
 
         &--5 {
             grid-row: row-start 3 / row-end 3;
             grid-column: col-start 3 / col-end 5;
+
+            @include respond($bp-large) {
+                grid-row: row-start 4 / row-end 4;
+            }
         }
 
         &--6 {
             grid-row: row-start 4 / row-end 4;
             grid-column: col-start 1 / col-end 3;
+
+            @include respond($bp-large) {
+                grid-row: row-start 5 / row-end 5;
+                grid-column: col-start 2/ -2;
+
+            }
         }
 
         &--7 {
             grid-row: row-start 5 / row-end 5;
             grid-column: col-start 1 / col-end 2;
+
+            @include respond($bp-large) {
+                grid-row: row-start 6 / row-end 6;
+                grid-column: col-start 2/ -2;
+
+            }
+
+            img {
+                @include respond($bp-img-special) {
+                    object-fit: fill !important;
+                }
+
+                @include respond($bp-large) {
+                    object-fit: cover !important;
+                }
+            }
         }
 
         &--8 {
             grid-row: row-start 5 / row-end 5;
             grid-column: col-start 3/-1;
+
+            @include respond($bp-large) {
+                grid-row: row-start 7 / row-end 7;
+            }
         }
 
         &--9 {
             grid-row: row-start 6 / row-end 6;
             grid-column: col-start 1/ col-end 3;
+
+            @include respond($bp-large) {
+                grid-row: row-start 8 / row-end 8;
+            }
         }
 
         &--10 {
@@ -74,11 +141,15 @@
             text-align: center;
             padding: 0 5rem;
             background-color: $color-white-shade-4;
+
+            @include respond($bp-large) {
+                grid-row: row-start 9 / row-end 9;
+                grid-column: col-start 2 / col-end 5;
+
+            }
         }
 
-        &--11 {}
 
-        &--12 {}
 
         &--combine {
             grid-row: row-start 7 / -1;
@@ -87,6 +158,10 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 4rem;
+
+            @include respond($bp-large) {
+                grid-row: row-start 10 / row-end -1;
+            }
         }
     }
 
