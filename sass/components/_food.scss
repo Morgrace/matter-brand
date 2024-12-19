@@ -20,7 +20,13 @@
         // justify-items: end;
         border-radius: 11px;
         box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        // overflow: hidden;
+        transition: transform .3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
 
         &--1 {
@@ -145,6 +151,8 @@
             @include respond($bp-large) {
                 grid-row: row-start 9 / row-end 9;
                 grid-column: col-start 2 / col-end 5;
+
+                padding: 5rem;
 
             }
         }

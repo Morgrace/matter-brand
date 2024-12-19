@@ -36,8 +36,6 @@
         gap: 5rem;
     }
 
-    &__location {}
-
     &__location-container {
         display: flex;
         gap: 2rem;
@@ -54,8 +52,6 @@
             height: 8rem;
         }
     }
-
-    &__location-details {}
 
     &__location-name {
         font-weight: 700; //bold
@@ -93,6 +89,17 @@
     &__social-icon {
         width: 4rem;
         height: 4rem;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(-1px);
+
+        }
     }
 
     &__copyright {

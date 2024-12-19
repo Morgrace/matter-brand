@@ -10,3 +10,8 @@
 .mb-lg {
     margin-bottom: 6rem !important;
 }
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}

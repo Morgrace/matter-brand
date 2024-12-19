@@ -13,6 +13,12 @@
         grid-template-columns: 1fr max-content;
         align-items: end;
         height: 45vh;
+        cursor: pointer;
+        transition: transform .5s;
+
+        &:hover {
+            transform: scale(0.99);
+        }
 
 
 
